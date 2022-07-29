@@ -9,10 +9,6 @@ const session = require("express-session");
 const flash = require("connect-flash");
 var cors = require('cors')
 
-// const port = process.env.PORT || 3030
-
-
-// const dashboardRouter = require("./app/dashboard/router");
 const route = require("./routes")
 const adminRouter = require("../app/admin/router");
 const dashboardRouter = require("../app/dashboard/router");
@@ -52,7 +48,7 @@ app.use(
 app.use('/sb-admin-2', express.static(path.join(__dirname, '../node_modules/startbootstrap-sb-admin-2/')));
 
 // MQTT
-route(app)
+// route(app)
 
 // AKHIR MQTT
 app.use("/", adminRouter);
@@ -83,8 +79,5 @@ app.use(function (err, req, res) {
   res.render("error");
 });
 
-// app.listen(process.env.PORT || '3000', () => {
-// 	console.log(`App run on :`)
-// })
 
 module.exports = app;
