@@ -48,7 +48,7 @@ app.use(
 app.use('/sb-admin-2', express.static(path.join(__dirname, '../node_modules/startbootstrap-sb-admin-2/')));
 
 // MQTT
-// route(app)
+route(app)
 
 // AKHIR MQTT
 app.use("/", adminRouter);
